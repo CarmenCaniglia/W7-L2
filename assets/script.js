@@ -32,15 +32,15 @@ deleteButton.addEventListener("click", clear);
 
 // esercizio 2
 const updateTimer = () => {
-  let timePassed = sessionStorage.getItem("passedTime");
-  if (!timePassed) {
-    timePassed = 0;
+  let time = sessionStorage.getItem("passedTime");
+  if (!time) {
+    time = 0;
   } else {
-    timePassed = parseInt(timePassed);
+    time = parseInt(time);
   }
-  timePassed++;
-  sessionStorage.setItem("passedTime", timePassed);
-  document.getElementById("time-passed").textContent = timePassed;
+  time++;
+  sessionStorage.setItem("passedTime", time);
+  document.getElementById("time-passed").textContent = time;
 };
 setInterval(updateTimer, 1000);
 
